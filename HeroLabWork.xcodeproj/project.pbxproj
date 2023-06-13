@@ -13,6 +13,9 @@
 		3A888667294328C100CC5ED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A888665294328C100CC5ED2 /* Main.storyboard */; };
 		3A888669294328C300CC5ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A888668294328C300CC5ED2 /* Assets.xcassets */; };
 		3A88866C294328C300CC5ED2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88866A294328C300CC5ED2 /* LaunchScreen.storyboard */; };
+		3A8886742943490C00CC5ED2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8886732943490C00CC5ED2 /* NetworkManager.swift */; };
+		3A888676294352A900CC5ED2 /* HeroModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A888675294352A900CC5ED2 /* HeroModelResponse.swift */; };
+		C905EE1B6E92A339A1EC8778 /* Pods_HeroLabWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA884533864373C29E20A146 /* Pods_HeroLabWork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		3A888668294328C300CC5ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A88866B294328C300CC5ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A88866D294328C300CC5ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8886732943490C00CC5ED2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3A888675294352A900CC5ED2 /* HeroModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModelResponse.swift; sourceTree = "<group>"; };
+		6729DCD7D3313B6EC1DDC928 /* Pods-HeroLabWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroLabWork.release.xcconfig"; path = "Target Support Files/Pods-HeroLabWork/Pods-HeroLabWork.release.xcconfig"; sourceTree = "<group>"; };
+		AA884533864373C29E20A146 /* Pods_HeroLabWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeroLabWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF7FC7D98919883430499F2 /* Pods-HeroLabWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroLabWork.debug.xcconfig"; path = "Target Support Files/Pods-HeroLabWork/Pods-HeroLabWork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C905EE1B6E92A339A1EC8778 /* Pods_HeroLabWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				3A88865E294328C100CC5ED2 /* HeroLabWork */,
 				3A88865D294328C100CC5ED2 /* Products */,
+				A5469DE40C5EC55EE1D3DD26 /* Pods */,
+				B1F8688496CFF358CD271242 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,27 @@
 				3A888668294328C300CC5ED2 /* Assets.xcassets */,
 				3A88866A294328C300CC5ED2 /* LaunchScreen.storyboard */,
 				3A88866D294328C300CC5ED2 /* Info.plist */,
+				3A8886732943490C00CC5ED2 /* NetworkManager.swift */,
+				3A888675294352A900CC5ED2 /* HeroModelResponse.swift */,
 			);
 			path = HeroLabWork;
+			sourceTree = "<group>";
+		};
+		A5469DE40C5EC55EE1D3DD26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEF7FC7D98919883430499F2 /* Pods-HeroLabWork.debug.xcconfig */,
+				6729DCD7D3313B6EC1DDC928 /* Pods-HeroLabWork.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B1F8688496CFF358CD271242 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA884533864373C29E20A146 /* Pods_HeroLabWork.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A888670294328C300CC5ED2 /* Build configuration list for PBXNativeTarget "HeroLabWork" */;
 			buildPhases = (
+				2A8E6977EF2E36A34DC619CB /* [CP] Check Pods Manifest.lock */,
 				3A888658294328C100CC5ED2 /* Sources */,
 				3A888659294328C100CC5ED2 /* Frameworks */,
 				3A88865A294328C100CC5ED2 /* Resources */,
+				3E86AB18021BC23F0A507DF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +165,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A8E6977EF2E36A34DC619CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeroLabWork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E86AB18021BC23F0A507DF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeroLabWork/Pods-HeroLabWork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeroLabWork/Pods-HeroLabWork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeroLabWork/Pods-HeroLabWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A888658294328C100CC5ED2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8886742943490C00CC5ED2 /* NetworkManager.swift in Sources */,
+				3A888676294352A900CC5ED2 /* HeroModelResponse.swift in Sources */,
 				3A888664294328C100CC5ED2 /* ViewController.swift in Sources */,
 				3A888660294328C100CC5ED2 /* AppDelegate.swift in Sources */,
 				3A888662294328C100CC5ED2 /* SceneDelegate.swift in Sources */,
@@ -282,6 +358,7 @@
 		};
 		3A888671294328C300CC5ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEF7FC7D98919883430499F2 /* Pods-HeroLabWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +386,7 @@
 		};
 		3A888672294328C300CC5ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6729DCD7D3313B6EC1DDC928 /* Pods-HeroLabWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
